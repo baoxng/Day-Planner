@@ -43,3 +43,14 @@ for( var i = 0; i <= 12; i++){
         $("#" + i + "row").addClass("future");
     }
 }
+
+//on click button event
+savelocalbtn.on("click", function(){
+    var hours = $(this).attr("data-hour");
+    var dailyPlan = $("#" + hours + "row").val(); //user input for daily plan
+    localStorage.setItem(hours, dailyPlan);
+   console.log(dailyPlan);
+});
+
+// need to get the stored user input
+
