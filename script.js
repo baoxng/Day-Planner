@@ -3,29 +3,60 @@
 function dateHeader(){
     var currentDateHeader= moment().format("MMMM Do YYYY");
     $("#currentDay").text(currentDateHeader);
+    
+    $(".time").each(function(){
+        var id= $(this).attr("id");
+        //get stored user-input and populate it to page.
+        var userInput = localStorage.getItem(id);
+        if (userInput !== null){
+            $(this).children(".user-input").val(userInput);
+        }
+    })
+
 }
 
 dateHeader();
 
 //display the current hour of the day and time (works!)
-    var currentHour = moment().format('HH');
+    var currentHour = moment().format('LT');
     var currentHourInt = parseInt(currentHour);
+    console.log(currentHourInt);
 
 //Variables
-    var saveLocalBtn = $(".localbtn");
+    var saveBtn = $(".savebtn");
 
 // give data attribute to the following elements
 //follow by the moment for each
-$("#9hr").attr("data-time", moment("9:00 am", "h:mm a").format("HH"));
-$("#10hr").attr("data-time", moment("10:00 am", "h:mm a").format("HH"));
-$("#11hr").attr("data-time", moment("11:00 am", "h:mm a").format("HH"));
-$("#12hr").attr("data-time", moment("12:00 pm", "h:mm a").format("HH"));
-$("#1hr").attr("data-time", moment("1:00 pm", "h:mm a").format("HH"));
-$("#2hr").attr("data-time", moment("2:00 pm", "h:mm a").format("HH"));
-$("#3hr").attr("data-time", moment("3:00 pm", "h:mm a").format("HH"));
-$("#4hr").attr("data-time", moment("4:00 pm", "h:mm a").format("HH"));
-$("#5hr").attr("data-time", moment("5:00 pm", "h:mm a").format("HH"));
-$("#6hr").attr("data-time", moment("6:00 pm", "h:mm a").format("HH"));
+var hour1= $("#9hr")
+var hour2= $("#10hr")
+var hour3= $("#11hr")
+var hour4= $("#12hr")
+var hour5= $("#1hr")
+var hour6= $("#2hr")
+var hour7= $("#3hr")
+var hour8= $("#4hr")
+var hour9= $("#5hr")
+var hour10= $("#6hr")
+
+saveBtn.on("click", function(){
+    var hour= $(this).parent().attr("id");
+    var userInput= $(this).siblings(".user-input").val();
+    localStorage.setItem(hour, userInput);
+});
+
+//set class of past/present/future to planner
+
+function scheduleEvent(){
+    hour =time.hours();
+    $("")
+}
+
+
+/*
+
+$(document).ready(function(){
+
+plans();
 
 //make a class past, present or future
 
@@ -45,12 +76,20 @@ for( var i = 0; i <= 12; i++){
 }
 
 //on click button event
-savelocalbtn.on("click", function(){
+saveLocalBtn.on("click", function(){
     var hours = $(this).attr("data-hour");
     var dailyPlan = $("#" + hours + "row").val(); //user input for daily plan
     localStorage.setItem(hours, dailyPlan);
-   console.log(dailyPlan);
 });
 
 // need to get the stored user input
+function plans(){
+    for(var j=0; j <= 12; j++){
+        $("#" + j + "row").val(localStorage.getItem(j));
+    }
+}
+});
+
+*/
+
 
