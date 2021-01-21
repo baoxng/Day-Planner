@@ -14,16 +14,12 @@ function dateHeader(){
     })
 
 }
-
+// running header and local storage
 dateHeader();
-
-//display the current hour of the day and time (works!)
-    var currentHour = moment().format('LT');
-    var currentHourInt = parseInt(currentHour);
-    console.log(currentHourInt);
 
 //Variables
     var saveBtn = $(".savebtn");
+    var time= moment();
 
 // give data attribute to the following elements
 //follow by the moment for each
@@ -48,48 +44,21 @@ saveBtn.on("click", function(){
 
 function scheduleEvent(){
     hour =time.hours();
-    $("")
+    $(".time").each(function(){
+        var currentHour= parseInt($(this).attr("id"));
+
+        if (currentHour === hour){
+            $(this).addClass("present");
+        }
+        else if(currentHour < hour){
+            $(this).addClass("past");
+        }
+        else {
+            $(this).addClass("future");
+        }
+    })
 }
 
-
-/*
-
-$(document).ready(function(){
-
-plans();
-
-//make a class past, present or future
-
-for( var i = 0; i <= 12; i++){
-    var inputHour = $("#" + i + "row").attr("data-time");
-    var inputHourInt = parseInt(inputHour);
-
-    if (currentHourInt === inputHourInt){
-        $("#" + i + "row").addClass("present");
-    }
-    if (currentHourInt > inputHourInt){
-        $("#" + i + "row").addClass("past");
-    }
-    if (currentHourInt < inputHourInt){
-        $("#" + i + "row").addClass("future");
-    }
-}
-
-//on click button event
-saveLocalBtn.on("click", function(){
-    var hours = $(this).attr("data-hour");
-    var dailyPlan = $("#" + hours + "row").val(); //user input for daily plan
-    localStorage.setItem(hours, dailyPlan);
-});
-
-// need to get the stored user input
-function plans(){
-    for(var j=0; j <= 12; j++){
-        $("#" + j + "row").val(localStorage.getItem(j));
-    }
-}
-});
-
-*/
-
+//run function
+scheduleEvent();
 
