@@ -1,5 +1,4 @@
 
 
-var currentDate = moment()
-
+var currentDate = moment().format('MMMM Do YYYY');
 console.log(currentDate);
