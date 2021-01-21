@@ -18,21 +18,21 @@ function dateHeader(){
 dateHeader();
 
 //Variables
-    var saveBtn = $(".savebtn");
-    var time= moment();
+    var saveBtn = $(".saveBtn");
+    var time = moment();
 
 // give data attribute to the following elements
 //follow by the moment for each
-var hour1= $("#9hr")
-var hour2= $("#10hr")
-var hour3= $("#11hr")
-var hour4= $("#12hr")
-var hour5= $("#1hr")
-var hour6= $("#2hr")
-var hour7= $("#3hr")
-var hour8= $("#4hr")
-var hour9= $("#5hr")
-var hour10= $("#6hr")
+var hour9= $("#9hr")
+var hour10= $("#10hr")
+var hour11= $("#11hr")
+var hour12= $("#12hr")
+var hour1= $("#13hr")
+var hour2= $("#14hr")
+var hour3= $("#15hr")
+var hour4= $("#16hr")
+var hour5= $("#17hr")
+var hour6= $("#18hr")
 
 saveBtn.on("click", function(){
     var hour= $(this).parent().attr("id");
@@ -43,7 +43,7 @@ saveBtn.on("click", function(){
 //set class of past/present/future to planner
 
 function scheduleEvent(){
-    hour =time.hours();
+    var hour = time.hour();
     $(".time").each(function(){
         var currentHour= parseInt($(this).attr("id"));
 
@@ -57,6 +57,7 @@ function scheduleEvent(){
             $(this).addClass("future");
         }
     })
+    console.log(hour);
 }
 
 //run function
