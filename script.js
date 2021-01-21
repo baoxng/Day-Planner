@@ -1,9 +1,4 @@
 
-
-//Function to make new columns
-
-
-
 //use moment to get current date for header(works!)
 function dateHeader(){
     var currentDateHeader= moment().format("MMMM Do YYYY");
@@ -12,15 +7,17 @@ function dateHeader(){
 
 dateHeader();
 
-//display the current hour of the day (works!)
+//display the current hour of the day and time (works!)
+    var currentHour = moment().format('HH');
+    var currentHourInt = parseInt(currentHour);
 
-function getCurrentTime(){
-    var currentTime = moment().format('H');
-    console.log(currentTime);
-}
-getCurrentTime();
+//Variables
+    var saveLocalBtn = $(".localbtn");
 
-//make new row from 9am-6pm
+// give data attribute to the following elements
+//follow by the moment for each
+$("#9hr").attr("data-time", moment("9:00 am", "h:mm a").format("HH"));
+
 
 
 
