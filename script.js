@@ -26,3 +26,20 @@ $("#3hr").attr("data-time", moment("3:00 pm", "h:mm a").format("HH"));
 $("#4hr").attr("data-time", moment("4:00 pm", "h:mm a").format("HH"));
 $("#5hr").attr("data-time", moment("5:00 pm", "h:mm a").format("HH"));
 $("#6hr").attr("data-time", moment("6:00 pm", "h:mm a").format("HH"));
+
+//make a class past, present or future
+
+for( var i = 0; i <= 12; i++){
+    var inputHour = $("#" + i + "row").attr("data-time");
+    var inputHourInt = parseInt(inputHour);
+
+    if (currentHourInt === inputHourInt){
+        $("#" + i + "row").addClass("present");
+    }
+    if (currentHourInt > inputHourInt){
+        $("#" + i + "row").addClass("past");
+    }
+    if (currentHourInt < inputHourInt){
+        $("#" + i + "row").addClass("future");
+    }
+}
