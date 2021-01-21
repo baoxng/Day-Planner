@@ -1,3 +1,14 @@
 
-var m = moment('2013-03-01', 'YYYY-MM-DD')
-console.log(m);
+
+//Function to make new columns
+
+
+
+//use moment to get current date for header
+function dateHeader(){
+    var currentDateHeader= moment().format("MMMM Do YYYY");
+    $("#currentDay").append(currentDateHeader);
+}
+
+dateHeader();
+
