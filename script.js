@@ -1,4 +1,3 @@
 
-
-var currentDate = moment().format('MMMM Do YYYY');
-console.log(currentDate);
+var m = moment('2013-03-01', 'YYYY-MM-DD')
+console.log(m);
