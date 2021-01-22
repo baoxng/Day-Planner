@@ -1,8 +1,10 @@
-# Day-Planner
+# Day-Planner 📆
 
 ## Project Description
 
 As a web developer I feel like I need to manage my time and having a day planner to track my activities would really help with that. Once the day planner is opened by a user, they can see the past, present and future plans/schedule that are displayed. Past is color-coded as gray, present is color-coded with red and future is color-coded with green. Users can then save a scheduled plan in the local storage and come back to it whenever they want.   
+
+Here is a [link to the Day Planner]() 
 
 ---
 ## Installation 
@@ -28,3 +30,15 @@ In the beginning of my developement, I wanted to get the current time and date f
 After getting my moment to work on my js file I was able to go ahead and add some columns for the day planner. This consists of the time, the input for users and the save buttons for each. I had an idea of adding columns div to the html page without any class, then I scratched that and decided to just add the classes with javascript. Realizing that I was getting lost in my own codes, I decided to rework it and condense it to what I have now. 
 
 Most of the process that I went through was console logging and checking to see if functions were working. Other time it was me staring at the screen figuring out how to make certain things work, like the colors for past, present and future. 
+
+<b> Here is the reference to help format dates and time with moments </b>
+![momentref.PNG](/images/momentref.PNG)
+
+<b>I just wanted the hour and found this really helpful</b>
+![momentref1.PNG](/images/momentref1.PNG)
+
+<b>I had some research with the parent and siblings and I came with this resource from stack over flow. I looked over W3schools for additional reference. </b>
+![stackoverflow1.PNG](/images/stackoverflow1.PNG)
+
+<b> Look into the day planner </b>
+![dayplanner.PNG](/images/dayplanner.PNG)
