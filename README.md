@@ -4,7 +4,7 @@
 
 As a web developer I feel like I need to manage my time and having a day planner to track my activities would really help with that. Once the day planner is opened by a user, they can see the past, present and future plans/schedule that are displayed. Past is color-coded as gray, present is color-coded with red and future is color-coded with green. Users can then save a scheduled plan in the local storage and come back to it whenever they want.   
 
-Here is a [link to the Day Planner]() 
+Here is a [link to the Day Planner](https://baoxng.github.io/Day-Planner/) 
 
 ---
 ## Installation 
